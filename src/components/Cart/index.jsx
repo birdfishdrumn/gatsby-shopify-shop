@@ -1,6 +1,6 @@
 import React from "react";
-import { CartWrapper } from "./styles"
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { CartWrapper,MenuLink,CartCounter } from "./styles"
+import { FaShoppingCart } from 'react-icons/fa';
 import CartContext from "context/CartContext";
 import  Badge  from "@material-ui/core/Badge"
 export function Cart() {
@@ -17,12 +17,16 @@ export function Cart() {
 
   return (
     <CartWrapper>
-      <Badge badgeContent={totalQuantity &&totalQuantity} color="secondary">
+      {/* <Badge badgeContent={totalQuantity &&totalQuantity} color="secondary">
               <ShoppingCartIcon size="2.5rem" />
-      </Badge>
-<div>
+      </Badge> */}
+      <MenuLink>
+          {<CartCounter>{totalQuantity}</CartCounter>}
+        <FaShoppingCart size="2rem" />
+        </MenuLink>
+{/* <div>
         {totalQuantity} item(s) / £{checkout?.totalPrice || '0.00'}
-      </div>
+      </div> */}
       {/* <span>
         {totalQuantity.reduce(reducer) || 0}
      </span> */}
