@@ -55,7 +55,7 @@ const ProductTemplate = (props) => {
           <h1>{props.data.shopifyProduct.title}</h1>
              <div>{!props.data.shopifyProduct.availableForSale && <h1>SOLD OUT</h1>}</div>
           {/* <p>{(props.data.shopifyProduct.descriptionHtml)}</p> */}
-          <p dangerouslySetInnerHTML={{ __html: props.data.shopifyProduct.descriptionHtml }}></p>
+          <div dangerouslySetInnerHTML={{ __html: props.data.shopifyProduct.descriptionHtml }}/>
           {product?.availableForSale && !!selectedVariant &&
             <>
             {/* 種類がないときはセレクトバーが表示されない。 */}
