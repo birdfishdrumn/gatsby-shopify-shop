@@ -5,11 +5,9 @@ import CartContext from "context/CartContext";
 import  Badge  from "@material-ui/core/Badge"
 export function Cart() {
   const { checkout } = React.useContext(CartContext);
-  let totalQuantity = checkout?.lineItems.map(item => item.quantity)
-  if (checkout) {
-     const reducer = (sum, currentValue) => sum + currentValue
-  }
-  console.log(totalQuantity.length)
+  const totalQuantity = checkout?.lineItems.map(item => item.quantity)
+  const reducer = (sum, currentValue) => sum + currentValue
+  console.log(checkout)
   // let totalQuantity = 0;
   // if (checkout) {
   //   checkout.lineItems.forEach(lineItem => {
@@ -19,7 +17,7 @@ export function Cart() {
 
   return (
     <CartWrapper>
-      <Badge badgeContent={totalQuantity.length} color="secondary">
+      <Badge badgeContent={totalQuantity &&totalQuantity} color="secondary">
               <FaShoppingCart size="2.5rem" />
       </Badge>
 
