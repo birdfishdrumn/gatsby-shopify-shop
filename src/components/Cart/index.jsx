@@ -9,7 +9,7 @@ export function Cart() {
   if (checkout) {
      const reducer = (sum, currentValue) => sum + currentValue
   }
-
+  console.log(totalQuantity.length)
   // let totalQuantity = 0;
   // if (checkout) {
   //   checkout.lineItems.forEach(lineItem => {
@@ -19,7 +19,7 @@ export function Cart() {
 
   return (
     <CartWrapper>
-      <Badge badgeContent={totalQuantity} color="secondary">
+      <Badge badgeContent={totalQuantity.length} color="secondary">
               <FaShoppingCart size="2.5rem" />
       </Badge>
 
