@@ -1,8 +1,6 @@
 import React,{useState} from "react";
-import { Input } from "../Input";
-import { Button } from "../Button"
 import { FaSearch } from "react-icons/fa";
-import { SearchForm } from "./styles";
+import { SearchForm ,Input,Button} from "./styles";
 import { Link } from "gatsby"
 import { navigate, useLocation } from "@reach/router"
 import queryString from "query-string";

@@ -8,8 +8,8 @@ export const CartWrapper = styled(StyledLink).attrs(() => ({
 `
 display:flex;
 padding-left:16px;
-margin-left:auto;
-margin-top:10px;
+margin-left:30px;
+margin-top:15px;
 color:black;
 text-decoration:none;
 `;

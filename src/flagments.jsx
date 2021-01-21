@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 
-export const ShopifyProductFields = graphql`
+export const productFields = graphql`
   fragment ShopifyProductFields on ShopifyProduct{
           shopifyId
      title
