@@ -1,6 +1,6 @@
 import React from "react";
 import { CartWrapper } from "./styles"
-import {FaShoppingCart} from "react-icons/fa"
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import CartContext from "context/CartContext";
 import  Badge  from "@material-ui/core/Badge"
 export function Cart() {
@@ -17,9 +17,9 @@ export function Cart() {
 
   return (
     <CartWrapper>
-      {/* <Badge badgeContent={totalQuantity &&totalQuantity} color="secondary"> */}
-              <FaShoppingCart size="2.5rem" />
-      {/* </Badge> */}
+      <Badge badgeContent={totalQuantity &&totalQuantity} color="secondary">
+              <ShoppingCartIcon size="2.5rem" />
+      </Badge>
 <div>
         {totalQuantity} item(s) / £{checkout?.totalPrice || '0.00'}
       </div>
