@@ -30,8 +30,8 @@ const handleAdjustQuantity = ({quantity,variantId})=>{
          <div>合計金額</div>
       </CartHeader>
       )}
-      {checkout?.lineItems.length === 0 && <h4>カートに商品が入ってません。</h4>}
-      {checkout?.lineItems.map(item=>(
+      {!checkout?.lineItems.length && <h4>カートに商品が入ってません。</h4>}
+      {checkout.lineItems.map(item=>(
       <CartItem key={item.variant.id}>
         <CartItemImage>
           <div>
