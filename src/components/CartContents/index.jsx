@@ -31,7 +31,7 @@ const handleAdjustQuantity = ({quantity,variantId})=>{
       </CartHeader>
       )}
       {!checkout?.lineItems.length && <h4>カートに商品が入ってません。</h4>}
-      {checkout.lineItems.map(item=>(
+      {checkout?.lineItems.map(item=>(
       <CartItem key={item.variant.id}>
         <CartItemImage>
           <div>
@@ -58,12 +58,15 @@ const handleAdjustQuantity = ({quantity,variantId})=>{
 
       </CartItem>
       ))}
-      {!checkout?.lineItems &&    <CartFooter>
-        <div><strong>合計金額</strong></div>
+      {checkout?.lineItems &&
+        (
+        <CartFooter>
+        <div>合計金額</div>
         <div>
           <span>￥{checkout?.totalPrice}</span>
         </div>
-      </CartFooter>}
+          </CartFooter>
+        )}
 
       <Footer>
         <div>
