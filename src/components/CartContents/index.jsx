@@ -36,7 +36,7 @@ const handleAdjustQuantity = ({quantity,variantId})=>{
         <div>
           <div>
               {item.title}
-           <Link to={`/products/${item.title}`}><Image src= {item.variant.image.src} width="100px" height="100px"/></Link>
+           <Link to={`/products/${item.title}`}><Image src= {item.variant.image.src}/></Link>
           </div>
           <div>
             {item.variant.title === "Default Title" ? "" : item.variant.title}

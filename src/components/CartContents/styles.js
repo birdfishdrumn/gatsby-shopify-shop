@@ -13,9 +13,7 @@ border-bottom: 1px solid black;
 }
 @media(max-width:767px) {
  >div{
-
     display:none;
-
  }
 }
 `
@@ -52,7 +50,7 @@ grid-template-columns:2fr 1fr 1fr 0.5fr 1fr 40px;
 >div{
   padding: 8px;
 
- &:first-child{
+ :first-child{
    >div:first-child{
      font-weight: bold;
      display:flex;
@@ -60,8 +58,6 @@ grid-template-columns:2fr 1fr 1fr 0.5fr 1fr 40px;
      flex-direction:column;
      text-align:center;
      margin:0 auto;
-
-
    }
    >div:last-child{
 
@@ -93,6 +89,8 @@ grid-template-columns:2fr 1fr 1fr 0.5fr 1fr 40px;
 export const Image = styled.img `
   display:block;
   margin: 0 auto;
+  width:100px;
+  height:100px;
 `
 
 export const Footer = styled.footer `

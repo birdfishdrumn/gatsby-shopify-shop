@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby"
 import { Layout,ImageGallery,ProductQuantityAdder,Button} from "components";
-import { Grid,SelectWrapper,Price } from "./styles"
+import { Grid,SelectWrapper,Price ,Sold} from "./styles"
 import CartContext from "context/CartContext";
 import { navigate, useLocation } from "@reach/router";
 import queryString from "query-string"
@@ -53,7 +53,7 @@ const ProductTemplate = (props) => {
         <div>
 
           <h1>{props.data.shopifyProduct.title}</h1>
-             <div>{!props.data.shopifyProduct.availableForSale && <h1>SOLD OUT</h1>}</div>
+             <div>{!props.data.shopifyProduct.availableForSale && <Sold>SOLD OUT</Sold>}</div>
           {/* <p>{(props.data.shopifyProduct.descriptionHtml)}</p> */}
           <div dangerouslySetInnerHTML={{ __html: props.data.shopifyProduct.descriptionHtml }}/>
           {product?.availableForSale && !!selectedVariant &&

@@ -33,6 +33,9 @@ margin-top:40px;
 
 export const Price = styled.div `
 margin: 40px 10px;
-
 font-size:30px;
+`;
+
+export const Sold = styled.h2 `
+  color:red;
 `;
