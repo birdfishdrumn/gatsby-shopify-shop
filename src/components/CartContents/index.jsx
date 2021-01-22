@@ -1,7 +1,7 @@
 import React from "react";
 
 import CartContext from "context/CartContext"
-import { CartItem, CartHeader, CartFooter, Image,Footer } from "./styles"
+import { CartItem, CartHeader, CartFooter, Image,Footer,CartItemImage } from "./styles"
 import { QuantityAdjuster } from "../QuantityAdjuster";
 import { RemoveLineItem } from "../RemoveLineItem";
 import { Link, navigate } from "gatsby"
@@ -33,7 +33,7 @@ const handleAdjustQuantity = ({quantity,variantId})=>{
       {checkout?.lineItems.length === 0 && <h4>カートに商品が入ってません。</h4>}
       {checkout?.lineItems?.map(item=>(
       <CartItem key={item.variant.id}>
-        <div>
+        <CartItemImage>
           <div>
               {item.title}
            <Link to={`/products/${item.title}`}><Image src= {item.variant.image.src}/></Link>
@@ -41,7 +41,7 @@ const handleAdjustQuantity = ({quantity,variantId})=>{
           <div>
             {item.variant.title === "Default Title" ? "" : item.variant.title}
           </div>
-          </div>
+        </CartItemImage>
 
         <div>
           ￥{item.variant.price}

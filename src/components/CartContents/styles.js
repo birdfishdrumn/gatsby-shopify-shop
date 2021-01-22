@@ -39,7 +39,14 @@ grid-template-columns:5fr 1fr 40px;
 }
 }
 `
-
+export const CartItemImage = styled.div `
+      font-weight: bold;
+     display:flex;
+     font-size:15px;
+     flex-direction:column;
+     text-align:center;
+     margin:0 auto;
+`
 
 export const CartItem = styled.div `
 border-bottom:1px solid black;
@@ -51,14 +58,7 @@ grid-template-columns:2fr 1fr 1fr 0.5fr 1fr 40px;
   padding: 8px;
 
  :first-child{
-   >div:first-child{
-     font-weight: bold;
-     display:flex;
-     font-size:15px;
-     flex-direction:column;
-     text-align:center;
-     margin:0 auto;
-   }
+
    >div:last-child{
 
      color: #999;
